@@ -1,5 +1,4 @@
 # Step by step React App.
-***
 
 *The step by step to creating a React App.*
 
