@@ -40,8 +40,22 @@ The intention of this project, is to guide you through the process of creating a
     `npm init -y`
 
   > To this point, you have all the directories and files that your app will
-  > need to run. Now is time to start adding some content to those
-  > files and installing some packages.
+  > need. Lets take a look at your folder structure:
+    
+  *To make things a bit easier we will be using the following files and directories names. Change as necessary.*
+
+  ```
+    app
+  |- dist
+  |   |- index.html
+  |- src 
+  |   |-index.js
+  |- .babelrc
+  |- .package.json
+  |- webpack.config.js
+  ```
+  
+  > Now it is time to start adding some content to those files and installing some packages.
 
 ## Webpack
   * ##### Install webpack
@@ -50,40 +64,39 @@ The intention of this project, is to guide you through the process of creating a
     > **webpack**: The actual package bundler.
     > **webpack-cli**: webpack's toolbelt. Configurations will be handled in webpack.config.js file.
     > **webpack-dev-server**: Your localhost Node.js server.
+    > **--save-dev**: Will add those dependencies to your package.json as `devDependencies`
 
     `npm install --save-dev webpack webpack-cli webpack-dev-server`
 
-  * ##### Add some *js* to your app's `src/index.js` file.
-    `echo "console.log('Hello World')" >> src/index.js`
 
   * ##### Add configurations to `webpack.config.js` file.
-    > The configuration below contains variables that you need to 
-    > take care of. This variables include `{sourceDirectoryName}` and
-    > `{bundleFileName}`. At this point you should already have all your file names. 
-    > So, you need to replace those with your names. I did it like this so that 
-    > you can name the files how every you may like.
-    >
-    > If in doubt, please see this projects [webpack.config.js](https://github.com/mauriciolealmx/react-step-by-step/blob/master/webpack.config.js) file.
-
     ```javascript
     module.exports = {
-      entry: ['./{sourceDirectoryName}/index.js'],
+      entry: ['./src/index.js'],
       output: {
-        path: __dirname + '/{distDirectoryName}',
+        path: __dirname + '/dist',
         publicPath: '/',
-        filename: '{bundleFileName}.js',
+        filename: 'bundle.js',
       },
       devServer: {
-        contentBase: './{distDirectoryName}',
+        contentBase: './dist',
       },
     }
+
+  * ##### Add a *start* script to your [package.json](https://github.com/mauriciolealmx/react-step-by-step/blob/master/package.json) file.
+    > **webpack-de-server** Running the Node server.
+    > **--config**: Utilizing our `webpack.config.js` file
+    > **--mode**: Development mode.
+
+    ```json
+    "start": "webpack-dev-server --config webpack.config.js --mode development",
     ```
 
   * ##### Add your basic HTML structure to `dist/index.html` file.
-    > Here, we have the same case as the latter. The `output.filename` that
-    > you specify in `webpack.config.js` has to be the one specified
-    > as src in the script tag. (e.g. `<script src="bundle.js"></script>`)
-    > If in doubt, please see this projects [index.html](https://github.com/mauriciolealmx/react-step-by-step/blob/master/dist/index.html) file.
+    > The `output.filename` that you specify in `webpack.config.js`
+    > has to be the same as the one specified as src in
+    > the script tag. (e.g. `<script src="bundle.js"></script>`)
+    > If in doubt, please see this project's [index.html](https://github.com/mauriciolealmx/react-step-by-step/blob/master/dist/index.html) file.
     
     ```html
     <!DOCTYPE html>
@@ -93,7 +106,7 @@ The intention of this project, is to guide you through the process of creating a
     </head>
     <body>
       <div id="container"></div>
-      <script src="{bundleFileName}.js"></script>
+      <script src="bundle.js"></script>
     </body>
     </html>
     ````
@@ -144,7 +157,14 @@ The intention of this project, is to guide you through the process of creating a
       ]
     }
     ```
-  
+  * ##### Let's add some *js* to your app's `src/index.js` file.
+    `echo "console.log('Hello World')" >> src/index.js`
+
+  * ##### Run your App to verify webpack is working.
+    > Once your app is running, you can visit you app at [localhost:8081](http://localhost:8081/)
+    > Open the console and you will see your "Hello World"
+
+    `npm start`
 
 ## React
   * ##### Install React
@@ -153,6 +173,22 @@ The intention of this project, is to guide you through the process of creating a
     
     `npm install react react-dom`
 
+## To Be Continued...
+  ```jsx
+  import React from 'react'
+  import ReactDOM from 'react-dom'
+
+  function App() {
+    return <div>Hello From App</div>
+  }
+
+  ReactDOM.render(<App />, document.getElementById('container'))
+  ```
+
+Best Regards,
+
+[Mauricio Leal](https://github.com/mauriciolealmx)
+[LinkedIn](https://www.linkedin.com/in/mauriciolealmx/?locale=en_US)
 
 ***
 
