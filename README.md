@@ -21,9 +21,9 @@ The intention of this project, is to guide you through the process of creating a
     `mkdir [sourceDirectoryName] && touch [sourceDirectoryName]/index.js`
 
   * ##### Create distribution/bundle directory and `index.html` file.
-    > This HTML file will contain the container div where your  
-    > React App will live. Also, will be referencing the bundled js  
-    > file created by webpack.  
+    > This HTML file will have the container div where your
+    > React App will live. Also, will be referencing the bundled js
+    > file created by webpack.
 
     `mkdir [distDirectoryName] && touch [distDirectoryName]/index.html`
   
@@ -34,12 +34,12 @@ The intention of this project, is to guide you through the process of creating a
     `touch .babelrc`
 
   * ##### Create package.json 
-    > **-y**: Will initialize your package.json file with default values.  
+    > **-y**: Will initialize your package.json file with default values.
   
     `npm init -y`
 
-  > To this point, you have all the directories and files that your app will  
-  > need. Lets take a look at your folder structure:  
+  > To this point, you have all the directories and files that your app wil 
+  > need. Lets take a look at your folder structure:
     
   *To make things a bit easier we will be using the following files and directories names. Change as necessary.*
 
@@ -92,8 +92,8 @@ The intention of this project, is to guide you through the process of creating a
     ```
 
   * ##### Add your basic HTML structure to `dist/index.html` file.
-    > The `output.filename` that you specify in `webpack.config.js`  
-    > has to be the same as the one specified as src in  
+    > The `output.filename` that you specify in `webpack.config.js`
+    > has to be the same as the one specified as src in
     > the script tag. (e.g. `<script src="bundle.js"></script>`)  
     > If in doubt, please see this project's [index.html](https://github.com/mauriciolealmx/react-step-by-step/blob/master/dist/index.html) file.  
     
@@ -144,7 +144,7 @@ The intention of this project, is to guide you through the process of creating a
     ```
 
   * ##### Add presets to [.babelrc](https://github.com/mauriciolealmx/react-step-by-step/blob/master/.babelrc).
-    > We are just specifying the use of the three presets we  
+    > We are just specifying the use of the three presets we
     > previously installed.  
 
     ```json
@@ -162,6 +162,7 @@ The intention of this project, is to guide you through the process of creating a
   * ##### Run your App to verify webpack is working.
     > Once your app is running, you can visit you app at [localhost:8081](http://localhost:8081/)  
     > Open the console and you will see your "Hello World"  
+    > Stop your app in console with `Ctrl + c`
 
     `npm start`
 
@@ -185,12 +186,14 @@ The intention of this project, is to guide you through the process of creating a
     ```
 
 ## Run your app.
-  > Now you can finally run your app and see a `"Hello From App"`  
+  > Now you can finally run your app and see a `"Hello From App"`
   > message in your browser. This means that `React` is working and `Babel` is  
-  > correctly transpaling `React Elements`.  
-  > Remember, your app is running at [localhost:8081](http://localhost:8081/)  
+  > correctly transpiling `React Elements`.  
+  > Remember, your app will be running at [localhost:8081](http://localhost:8081/)  
     
-    `npm start`
+  `npm start`
+
+If you have any questions or suggestions please feel free to shoot me an email.
 
 Best Regards,
 
