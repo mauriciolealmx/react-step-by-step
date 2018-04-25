@@ -83,7 +83,7 @@ The intention of this project, is to guide you through the process of creating a
     }
 
   * ##### Add a *start* script to your [package.json](https://github.com/mauriciolealmx/react-step-by-step/blob/master/package.json) file.
-    > **webpack-de-server** Running the Node server.  
+    > **webpack-dev-server** Running the Node server.  
     > **--config**: Utilizing our `webpack.config.js` file  
     > **--mode**: Development mode.  
 
@@ -179,7 +179,7 @@ The intention of this project, is to guide you through the process of creating a
     import ReactDOM from 'react-dom'
 
     function App() {
-      return <div>Hello From App</div>
+      return <h1>Hello From App</h1>
     }
 
     ReactDOM.render(<App />, document.getElementById('container'))
@@ -187,7 +187,7 @@ The intention of this project, is to guide you through the process of creating a
 
 ## Run your app.
   > Now you can finally run your app and see a `"Hello From App"`
-  > message in your browser. This means that `React` is working and `Babel` is  
+  > message in your browser. This means that `React` is working and `Babel` is
   > correctly transpiling `React Elements`.  
   > Remember, your app will be running at [localhost:8081](http://localhost:8081/)  
     
