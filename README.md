@@ -41,7 +41,7 @@ The intention of this project, is to guide you through the process of creating a
   > To this point, you have all the directories and files that your app wil 
   > need. Lets take a look at your folder structure:
     
-  *To make things a bit easier we will be using the following files and directories names. Change as necessary.*
+  *To make things a bit easier we will be using the following files' and directories' names. Change as necessary.*
 
   ```
   app
@@ -114,7 +114,7 @@ The intention of this project, is to guide you through the process of creating a
   * ##### Install Babel.
     > **babel-core**: Babel's source code.  
     > **babel-loader**: webpack's plugin for babel.  
-    > **babel-preset-env**: Compiles ES2015+ down to ES5.  
+    > **babel-preset-env**: Compiles ES2015+ down to ES6.  
 
     `npm install --save-dev babel-core babel-loader babel-preset-env`
 
